@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext", // Specify the output module used
+    "moduleResolution": "NodeNext",
+    "target": "ES2022", // Target output for code
+    "outDir": "dist", // Output directory for build
+    "esModuleInterop": true,
+    "strict": true /* Enable all strict type-checking options. */,
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "baseUrl": ".", // Base directory for imports
+    "paths": {
+      "@/*": ["src/*"] // Relative path for imports (alias)
+    }
+  },
+  "files": ["src/type.d.ts"], // Files used to define global types for the project
+  "include": ["src/**/*"] // Include directory for files to build
+}
