@@ -65,12 +65,29 @@ npm install
 3. Create a `.env` file in the root directory with the following variables:
 
 ```env
-DATABASE_URL="postgresql://user:password@localhost:5432/dbname"
-JWT_SECRET="your-jwt-secret"
-GOOGLE_CLIENT_ID="your-google-client-id"
-GOOGLE_CLIENT_SECRET="your-google-client-secret"
-GOOGLE_REDIRECT_URL="http://localhost:3000/auth/google/callback"
-UPLOAD_FOLDER="./uploads"
+PORT=4000
+DOMAIN=localhost
+PROTOCOL=http
+DATABASE_URL="file:./dev.db"
+ACCESS_TOKEN_SECRET=access_token_secret
+REFRESH_TOKEN_SECRET=refresh_token_secret
+ACCESS_TOKEN_EXPIRES_IN=1h
+REFRESH_TOKEN_EXPIRES_IN=1d
+GUEST_ACCESS_TOKEN_EXPIRES_IN=15m
+GUEST_REFRESH_TOKEN_EXPIRES_IN=12h
+UPLOAD_FOLDER=uploads
+INITIAL_EMAIL_OWNER=admin@order.com
+INITIAL_PASSWORD_OWNER=123456
+SERVER_TIMEZONE=Asia/Saigon
+CLIENT_URL=http://localhost:3000
+GOOGLE_REDIRECT_CLIENT_URL=http://localhost:3000/vi/login/oauth
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_AUTHORIZED_REDIRECT_URI=http://localhost:4000/auth/login/google
+PRODUCTION=false
+DOCKER=false
+PRODUCTION_URL=http://localhost:4000
+
 ```
 
 4. Run database migrations:
